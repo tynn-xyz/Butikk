@@ -1,0 +1,6 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:xyz.tynn.butikk$createStore(kotlinx.coroutines.CoroutineScope, kotlin.coroutines.CoroutineContext, kotlin.coroutines.SuspendFunction0((xyz.tynn.butikk.createStore.State)))xyz.tynn.butikk/kotlinx.coroutines.-coroutine-scope/create-store.html
+xyz.tynn.butikk
+xyz.tynn.butikk.flow
+xyz.tynn.butikk.livedata

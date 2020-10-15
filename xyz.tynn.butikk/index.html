@@ -1,0 +1,122 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>xyz.tynn.butikk - Butikk</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">Butikk</a>&nbsp;/&nbsp;<a href="./index.html">xyz.tynn.butikk</a><br/>
+<br/>
+<h2>Package xyz.tynn.butikk</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-action.html">Action</a></h4>
+</td>
+<td>
+<p>Lambda typealias to run an action on the <code>Store</code> with the current <code>State</code> as parameter.</p>
+<code><span class="keyword">typealias </span><span class="identifier">Action</span><span class="symbol">&lt;</span><span class="identifier">State</span><span class="symbol">, </span><span class="identifier">Result</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="keyword">suspend </span><a href="-store/index.html"><span class="identifier">Store</span></a><span class="symbol">&lt;</span><span class="identifier">State</span><span class="symbol">&gt;</span><span class="symbol">.</span><span class="symbol">(</span><span class="identifier">State</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Result</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-initializer.html">Initializer</a></h4>
+</td>
+<td>
+<p>Lambda typealias to initialize the <a href="-store/index.html">Store</a> with a <code>State</code>.</p>
+<code><span class="keyword">typealias </span><span class="identifier">Initializer</span><span class="symbol">&lt;</span><span class="identifier">State</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="keyword">suspend </span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">State</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-observer.html">Observer</a></h4>
+</td>
+<td>
+<p>Lambda typealias to observe the <code>Value</code> of the <a href="-store/index.html">Store</a>.</p>
+<code><span class="keyword">typealias </span><s><span class="identifier">Observer</span></s><span class="symbol">&lt;</span><span class="identifier">Value</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="keyword">suspend </span><span class="symbol">(</span><span class="identifier">Value</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-selector.html">Selector</a></h4>
+</td>
+<td>
+<p>Lambda typealias to select <code>Value</code> in <code>State</code>.</p>
+<code><span class="keyword">typealias </span><s><span class="identifier">Selector</span></s><span class="symbol">&lt;</span><span class="identifier">State</span><span class="symbol">, </span><span class="identifier">Value</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="identifier">State</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Value</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-store/index.html">Store</a></h4>
+</td>
+<td>
+<p>A store providing methods to update the <a href="-store/value.html">value</a> and observe changes to it.</p>
+<code><span class="keyword">interface </span><span class="identifier">Store</span><span class="symbol">&lt;</span><span class="identifier">State</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/index.html"><span class="identifier">Flow</span></a><span class="symbol">&lt;</span><span class="identifier">State</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-updater.html">Updater</a></h4>
+</td>
+<td>
+<p>Lambda typealias to update the <a href="-store/index.html">Store</a> with a <code>State</code>.</p>
+<code><span class="keyword">typealias </span><span class="identifier">Updater</span><span class="symbol">&lt;</span><span class="identifier">State</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="identifier">State</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">State</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extensions for External Classes</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="kotlinx.coroutines.-coroutine-scope/index.html">kotlinx.coroutines.CoroutineScope</a></h4>
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="await.html">await</a></h4>
+</td>
+<td>
+<p>Await <a href="await.html#State">State</a> of store matching <a href="await.html#xyz.tynn.butikk$await(xyz.tynn.butikk.Store((xyz.tynn.butikk.await.State)), kotlin.Function1((xyz.tynn.butikk.await.State, kotlin.Boolean)))/select">select</a>.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">State</span><span class="symbol">&gt;</span> <a href="-store/index.html"><span class="identifier">Store</span></a><span class="symbol">&lt;</span><span class="identifier">State</span><span class="symbol">&gt;</span><span class="symbol">.</span><s><span class="identifier">await</span></s><span class="symbol">(</span><span class="identifier" id="xyz.tynn.butikk$await(xyz.tynn.butikk.Store((xyz.tynn.butikk.await.State)), kotlin.Function1((xyz.tynn.butikk.await.State, kotlin.Boolean)))/select">select</span><span class="symbol">:</span>&nbsp;<a href="-selector.html"><span class="identifier">Selector</span></a><span class="symbol">&lt;</span><span class="identifier">State</span><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">State</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="dispatch.html">dispatch</a></h4>
+</td>
+<td>
+<p>Dispatches an <a href="dispatch.html#xyz.tynn.butikk$dispatch(xyz.tynn.butikk.Store((xyz.tynn.butikk.dispatch.State)), kotlin.coroutines.SuspendFunction2((xyz.tynn.butikk.Store((xyz.tynn.butikk.dispatch.State)), , xyz.tynn.butikk.dispatch.Result)))/action">action</a> to run with the current <a href="-store/value.html">Store.value</a> provided as parameter.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">State</span><span class="symbol">, </span><span class="identifier">Result</span><span class="symbol">&gt;</span> <a href="-store/index.html"><span class="identifier">Store</span></a><span class="symbol">&lt;</span><span class="identifier">State</span><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">dispatch</span><span class="symbol">(</span><span class="identifier" id="xyz.tynn.butikk$dispatch(xyz.tynn.butikk.Store((xyz.tynn.butikk.dispatch.State)), kotlin.coroutines.SuspendFunction2((xyz.tynn.butikk.Store((xyz.tynn.butikk.dispatch.State)), , xyz.tynn.butikk.dispatch.Result)))/action">action</span><span class="symbol">:</span>&nbsp;<a href="-action.html"><span class="identifier">Action</span></a><span class="symbol">&lt;</span><span class="identifier">State</span><span class="symbol">,</span>&nbsp;<span class="identifier">Result</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Result</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="observe.html">observe</a></h4>
+</td>
+<td>
+<p>Observe changes to <a href="observe.html#Value">Value</a> in <a href="observe.html#State">State</a> of <a href="-store/value.html">Store.value</a>.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">State</span><span class="symbol">, </span><span class="identifier">Value</span><span class="symbol">&gt;</span> <a href="-store/index.html"><span class="identifier">Store</span></a><span class="symbol">&lt;</span><span class="identifier">State</span><span class="symbol">&gt;</span><span class="symbol">.</span><s><span class="identifier">observe</span></s><span class="symbol">(</span><span class="identifier" id="xyz.tynn.butikk$observe(xyz.tynn.butikk.Store((xyz.tynn.butikk.observe.State)), kotlin.Function1((xyz.tynn.butikk.observe.State, xyz.tynn.butikk.observe.Value)), kotlin.coroutines.SuspendFunction1((xyz.tynn.butikk.observe.Value, kotlin.Unit)))/select">select</span><span class="symbol">:</span>&nbsp;<a href="-selector.html"><span class="identifier">Selector</span></a><span class="symbol">&lt;</span><span class="identifier">State</span><span class="symbol">,</span>&nbsp;<span class="identifier">Value</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="xyz.tynn.butikk$observe(xyz.tynn.butikk.Store((xyz.tynn.butikk.observe.State)), kotlin.Function1((xyz.tynn.butikk.observe.State, xyz.tynn.butikk.observe.Value)), kotlin.coroutines.SuspendFunction1((xyz.tynn.butikk.observe.Value, kotlin.Unit)))/observe">observe</span><span class="symbol">:</span>&nbsp;<a href="-observer.html"><span class="identifier">Observer</span></a><span class="symbol">&lt;</span><span class="identifier">Value</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="subscribe.html">subscribe</a></h4>
+</td>
+<td>
+<p>Subscribe to consume all <a href="-store/value.html">Store.value</a> changes with <a href="subscribe.html#xyz.tynn.butikk$subscribe(xyz.tynn.butikk.Store((xyz.tynn.butikk.subscribe.State)), kotlin.coroutines.SuspendFunction1((xyz.tynn.butikk.subscribe.State, kotlin.Unit)))/observe">observe</a>.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">State</span><span class="symbol">&gt;</span> <a href="-store/index.html"><span class="identifier">Store</span></a><span class="symbol">&lt;</span><span class="identifier">State</span><span class="symbol">&gt;</span><span class="symbol">.</span><s><span class="identifier">subscribe</span></s><span class="symbol">(</span><span class="identifier" id="xyz.tynn.butikk$subscribe(xyz.tynn.butikk.Store((xyz.tynn.butikk.subscribe.State)), kotlin.coroutines.SuspendFunction1((xyz.tynn.butikk.subscribe.State, kotlin.Unit)))/observe">observe</span><span class="symbol">:</span>&nbsp;<a href="-observer.html"><span class="identifier">Observer</span></a><span class="symbol">&lt;</span><span class="identifier">State</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="unsubscribe.html">unsubscribe</a></h4>
+</td>
+<td>
+<p>Unsubscribe from within <a href="subscribe.html">subscribe</a>.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><s><span class="identifier">unsubscribe</span></s><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html"><span class="identifier">Nothing</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

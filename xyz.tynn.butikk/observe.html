@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>observe - Butikk</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">Butikk</a>&nbsp;/&nbsp;<a href="index.html">xyz.tynn.butikk</a>&nbsp;/&nbsp;<a href="./observe.html">observe</a><br/>
+<br/>
+<h1>observe</h1>
+<a name="xyz.tynn.butikk$observe(xyz.tynn.butikk.Store((xyz.tynn.butikk.observe.State)), kotlin.Function1((xyz.tynn.butikk.observe.State, xyz.tynn.butikk.observe.Value)), kotlin.coroutines.SuspendFunction1((xyz.tynn.butikk.observe.Value, kotlin.Unit)))"></a>
+<code><span class="keyword">suspend</span> <span class="keyword">inline</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">State</span><span class="symbol">, </span><span class="identifier">Value</span><span class="symbol">&gt;</span> <a href="-store/index.html"><span class="identifier">Store</span></a><span class="symbol">&lt;</span><span class="identifier">State</span><span class="symbol">&gt;</span><span class="symbol">.</span><s><span class="identifier">observe</span></s><span class="symbol">(</span><span class="keyword">crossinline</span> <span class="identifier" id="xyz.tynn.butikk$observe(xyz.tynn.butikk.Store((xyz.tynn.butikk.observe.State)), kotlin.Function1((xyz.tynn.butikk.observe.State, xyz.tynn.butikk.observe.Value)), kotlin.coroutines.SuspendFunction1((xyz.tynn.butikk.observe.Value, kotlin.Unit)))/select">select</span><span class="symbol">:</span>&nbsp;<a href="-selector.html"><span class="identifier">Selector</span></a><span class="symbol">&lt;</span><span class="identifier">State</span><span class="symbol">,</span>&nbsp;<span class="identifier">Value</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="keyword">crossinline</span> <span class="identifier" id="xyz.tynn.butikk$observe(xyz.tynn.butikk.Store((xyz.tynn.butikk.observe.State)), kotlin.Function1((xyz.tynn.butikk.observe.State, xyz.tynn.butikk.observe.Value)), kotlin.coroutines.SuspendFunction1((xyz.tynn.butikk.observe.Value, kotlin.Unit)))/observe">observe</span><span class="symbol">:</span>&nbsp;<a href="-observer.html"><span class="identifier">Observer</span></a><span class="symbol">&lt;</span><span class="identifier">Value</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<strong>Deprecated:</strong> Store implements Flow and provides all its operators<br/>
+<br/>
+<p>Observe changes to <a href="observe.html#Value">Value</a> in <a href="observe.html#State">State</a> of <a href="-store/value.html">Store.value</a>.</p>
+<p>The function resumes when the store is closed or the <a href="-observer.html">Observer</a> canceled.</p>
+<h3>Parameters</h3>
+<p><a name="select"></a>
+<code>select</code> - The <a href="-selector.html">Selector</a> of the <a href="observe.html#Value">Value</a> in <a href="observe.html#State">State</a>.</p>
+<p><a name="observe"></a>
+<code>observe</code> - The <a href="-observer.html">Observer</a> receiving the values.</p>
+</BODY>
+</HTML>
